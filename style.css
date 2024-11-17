@@ -212,26 +212,42 @@ a {
     margin-bottom: 15px;
 }
 .about-info p {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 20px;
     max-width: 700px;
+    margin-left: 20%;
 }
 .details {
     display: flex;
-    gap: 15px;
-    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 10px; /* Adjusts space between buttons */
+    justify-content: center; /* Centers buttons */
     margin-bottom: 20px;
 }
+
 .details .btn {
-    padding: 10px 20px;
     background: #7cf03d;
     color: #1f242d;
     border-radius: 30px;
-    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
+    padding: 8px 15px; /* Reduced padding for smaller buttons */
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
 }
+
+/* Responsive adjustments for small screens */
+@media (max-width: 667px) {
+    .details {
+        gap: 5px; /* Reduce spacing for extra-small screens */
+    }
+
+    .details .btn {
+        padding: 8px 10px; /* Further reduce padding */
+        font-size: 0.8rem; /* Slightly smaller font size */
+    }
+}
+
 .details .btn:hover {
     background: transparent;
     color: #7cf03d;
@@ -273,6 +289,7 @@ a {
     text-align: center;
     background-color: #1f242d;
     color: #fff;
+   margin-left: 30px;
 }
 
 .services h2 {
@@ -282,20 +299,25 @@ a {
 
 .service-buttons {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     justify-content: center;
     margin-bottom: 30px;
+    margin-left: 30%;
+    margin-right: 10%;
+    
 }
 
 .service-buttons .btn {
     padding: 10px 30px;
     background: #7cf03d;
     color: #1f242d;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 85%;
+   
 }
 
 .service-buttons .btn:hover {
@@ -365,7 +387,7 @@ a {
     }
 }
 
-
+/*dashboard section*/
 
 
 /* Contact Section */
