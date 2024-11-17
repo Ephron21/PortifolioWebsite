@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portifolio website</title>
+    <title>My portifolio </title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <nav class="navbar">
-        <a href=""class="logo"> portifolio</a>
+    
+        <div class="logo"> 
+            <img src="log.png" style="width: 80px;height: 80px;">
+            Mr. Esron 
+        </div>
         <ul>
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">portifolio</a></li>
-            <li class="service"><a href="#">Service</a>
-
+            <li ><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <!-- <li><a href="#">portifolio</a></li> -->
+            <li ><a href="#service">Service</a>
+                <!-- <ul class="dropdown">
+                    <li><a href="#service">Online Application</a></li>
+                    <li><a href="#">Other Services</a></li>
+                </ul> -->
             </li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
 
 
         </ul>
@@ -30,29 +37,18 @@
         <div class="bar" style="--i:2;"></div>
         <div class="bar" style="--i:1;"></div>
     </div>
-    <section class="home">
+    <section id="home" class="home">
        <div class="home-info">
-            <h1> Ephron TUYISHIME</h1>
+            <h1> Esron TUYISHIME</h1>
             <h2>I'm a 
-                <span style="--i:4;" data-text="Frontend Developer">Frontend Developer</span>
-                <span style="--i:3;" data-text="Designer">Designer</span>
-                <span style="--i:2;" data-text="Youtuber">Youtuber</span>
+                <span style="--i:4;" data-text="Front-end Developer">Front-end Developer</span>
+                <span style="--i:3;" data-text="Computer-Graphics Designer">Computer-Graphics Designer</span>
+                <span style="--i:2;" data-text="Back-end Developer">Back-end Developer</span>
                 <span style="--i:1;" data-text="Application Assistant">Application Assistant</span>
             </h2>
-            <P>A passionate and detail-oriented Frontend Developer
-                 with 2 years of experience in
-                 designing and implementing responsive,
-                 user-friendly web interfaces.  </P>
-                 <div class="btn-sci">
-                    <a href="CURRICULUMU VITAE Ephron.pdf" class="btn">Download CV</a>
-                    <div class="sci">
-                        <a href="#"><i class='bx bxl-github'></i></a>
-                        <a href="#"><i class='bx bxl-linkedin' ></i></a>
-                        <a href="#"><i class='bx bxl-whatsapp' ></i></a>
-                        <a href="#"><i class='bx bxl-twitter' ></i></a>
-                        
-                    </div>
-                 </div>
+            <P>A passionate and detail-oriented in Full-stack Development
+                 with 2 years of experience.  </P>
+                 
        </div>
        <div class="home-img">
          <div class="img-box">
@@ -64,28 +60,218 @@
        </div>
 
     </section>
-    <section class="about">
-        <h2>About Me</h2>
-        <p>Describe yourself here, your journey, skills, and interests.</p>
+    <section id="about" class="about">
+        <div class="about-img">
+            <div class="img-box">
+                <img src="te.png" alt="Profile Image">
+            </div>
+        </div>
+        <div class="about-info">
+            <h2>About Me</h2>
+            <p>I'm a passionate Full Stack Developer with experience in building responsive and dynamic websites.
+                 With a background in computer science, I have developed skills in front-end development using HTML, CSS, and 
+                JavaScript, as well as back-end development using Node.js and MySQL.
+                I am a passionate developer with a strong background in building web applications and solving real-world problems.</p>
+            
+            <div class="details">
+                <button class="btn" data-target="skills">Skills</button>
+                <button class="btn" data-target="experience">Experience</button>
+                <button class="btn" data-target="education">Education</button>
+                <button class="btn" data-target="View CV">View CV</button>
+                
+            </div>
+            <div class="hidden-content">
+                <div id="skills" class="content">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>Web Development (HTML, CSS, JavaScript, React)</li>
+                        <li>Back-end Development (Node.js, Express, MongoDB)</li>
+                        <li>UI/UX Design</li>
+                        <li>Version Control (Git, GitHub)</li>
+                    </ul>
+                </div>
+                <div id="experience" class="content">
+                    <h3>Experience</h3>
+                    <ul>
+                        <li>3 years as a freelance developer</li>
+                        <li>2 years as a software engineer at XYZ Company</li>
+                        <li>Worked on 10+ web projects for clients</li>
+                    </ul>
+                </div>
+                <div id="education" class="content">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>Bachelor's in Computer Science, University of Rwanda</li>
+                        <li>Certification in Front-end Development</li>
+                    </ul>
+                </div>
+                <div id="View CV" class="content">
+                    <iframe src="Esron CV.pdf" frameborder="2" class="cv"></iframe>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('.details .btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-target');
+                    const content = document.getElementById(target);
+        
+                    // Hide all content first
+                    document.querySelectorAll('.hidden-content .content').forEach(div => {
+                        div.style.display = 'none';
+                    });
+        
+                    // Show the targeted content
+                    content.style.display = 'block';
+                });
+            });
+        </script>
+        
+        
+    
+</section>
+    <!--Service section-->
+    <section id="service" class="services">
+        <h2>Our Services</h2>
+        <div class="service-buttons">
+            <button class="btn" data-target="web-development">Web Development</button>
+            <button class="btn" data-target="graphics-design">Graphics Design</button>
+            <button class="btn" data-target="online-services">Online Services</button>
+        </div>
+        
+        <!-- Web Development Section -->
+        <div id="web-development" class="service-content">
+            <h3>Web Development</h3>
+            <p>We create fast, responsive, and user-friendly websites to help businesses and individuals establish their online presence.</p>
+            <div class="carousel">
+                <!-- Slide Images or Video -->
+                <div class="carousel-item">
+                    <img src="code.jpeg" alt="Web Development">
+                </div>
+                <div class="carousel-item">
+                    <video controls>
+                        <source src="webdelop.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- Additional images or videos can go here -->
+            </div>
+        </div>
+        
+        <!-- Graphics Design Section -->
+        <div id="graphics-design" class="service-content">
+            <h3>Graphics Design</h3>
+            <p>We offer professional graphics design services for logos, banners, posters, and other visual content to elevate your brand.</p>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="fyr.jpg" alt="Graphics Design">
+                </div>
+                <div class="carousel-item">
+                    <img src="businesscard.jpg" alt="Graphics Design">
+                </div>
+                <div class="carousel-item">
+                    <img src="log.png" alt="Graphics Design">
+                </div>
+                <div class="carousel-item">
+                    <img src="flyer.jpg" alt="Graphics Design">
+                </div>
+                <div class="carousel-item">
+                    <img src="fy.jpg" alt="Graphics Design">
+                </div>
+                <!-- Add more images here -->
+            </div>
+        </div>
+    <!--javascript of service-->
+        <!-- Online Services Section -->
+        <div id="online-services" class="service-content">
+            <h3>Online Services</h3>
+            <p>We provide assistance with online services such as job applications, Irembo, and university applications.</p>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="mifotra.png" alt="Job Applications">
+                </div>
+                <div class="carousel-item">
+                    <img src="ur.png" alt="University Applications">
+                </div>
+                <div class="carousel-item">
+                    <img src="ines.jpg" alt="University Applications">
+                </div>
+                <div class="carousel-item">
+                    <img src="rp.jpg" alt="University Applications">
+                </div>
+                <!-- More images can be added -->
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('.service-buttons .btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-target');
+        
+                    // Hide all service content first
+                    document.querySelectorAll('.service-content').forEach(content => {
+                        content.style.display = 'none';
+                    });
+        
+                    // Show the targeted service content
+                    const serviceContent = document.getElementById(target);
+                    serviceContent.style.display = 'block';
+                });
+            });
+        </script>
+        
     </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio">
-        <h2>Portfolio</h2>
-        <p>Showcase your projects, designs, or artworks here with images or project descriptions.</p>
-    </section>
-
-    <!-- Service Section -->
-    <section class="service">
-        <h2>My Services</h2>
-        <p>Explain the services you offer, such as web development, graphic design, or content creation.</p>
-    </section>
-
+    
+    
     <!-- Contact Section -->
-    <section class="contact">
+    <section id="contact" class="contact">
         <h2>Contact Me</h2>
-        <p>Provide a form or contact details where people can reach you.</p>
+        <p>Feel free to reach out to me through the contact information below or use the form to send me a message.</p>
+        
+        <!-- Contact Information -->
+        <div  class="contact-info">
+            <p><strong>Email:</strong> esrontuyi21@gmail.com</p><br>
+            <p><strong>Phone:</strong> +250787846344</p>
+        </div>
+    
+        <!-- Contact Form -->
+        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        
     </section>
+   
+   <footer class="footer">
+    <div class="footer-container">
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <a href="https://wa.me/+250787846344" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://x.com/your-profile" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://linkedin.com/in/your-profile" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/your-profile" target="_blank"><i class='bx bxl-github'></i></a>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-copy">
+            <p>© 2024 Designed by <span>Esron TUYISHIME</span>. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
     
 </body>
 </html>
